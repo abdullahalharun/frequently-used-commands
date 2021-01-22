@@ -1,5 +1,5 @@
-# sql-commands
-Commonly used useful MySQL commands
+# Frequenly Used Commands
+Frequently used commands
 
 ### Lamp server
 
