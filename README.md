@@ -18,3 +18,9 @@ Frequently used commands
 | ------- | ----------- |
 | `sudo chgrp -R www-data storage bootstrap/cache` | Command One |
 | `sudo chmod -R ug+rwx storage bootstrap/cache` | Command Two |
+
+#### Enable site in apache2
+> `sudo a2ensite domain.com.conf`
+
+#### Enable ssl certificate in apache2
+> `certbot --apache -d example.com -d www.example.com`
