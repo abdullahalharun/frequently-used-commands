@@ -18,3 +18,15 @@
 ### Merge table & create a new one on id
 > `CREATE TABLE new_table AS (SELECT t1.id, t1.a, t1.b, t1.c, t2.x, t2.y, t2.z FROM t1 INNER JOIN  t2 ON t1.id = t2.id );`
 
+### Export all databases at once
+> `mysqldump -u root -p --all-databases > /var/www/alldb.sql`
+
+### Export single database
+> `mysqldump -u root -p db_name > /var/www/db_export_date.sql`
+
+### Import all databases at once
+> `mysql -u root -p < /var/www/alldb.sql`
+
+### Import single database
+> `mysql -u root -p < /var/www/db_name.sql`
+
