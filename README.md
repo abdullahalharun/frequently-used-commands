@@ -24,3 +24,10 @@ Frequently used commands
 
 #### Enable ssl certificate in apache2
 > `certbot --apache -d example.com -d www.example.com`
+
+### Rewrite mode enable commands for lamp server
+
+| Command | Description |
+| ------- | ----------- |
+| `sudo a2enmod rewrite` | Enable Rewrite |
+| `sudo systemctl restart apache2` | Restart Apache |

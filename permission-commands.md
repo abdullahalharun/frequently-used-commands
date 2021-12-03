@@ -10,6 +10,13 @@
 | Command | Description |
 | ------- | ----------- |
 | `sudo chown -R www-data:myusername /var/www/path` | Command One |
-| `sudo find /path/to/your/wordpress/install/ -type d -exec chmod 775 {} \;` | Command Two |
-| `sudo find /path/to/your/wordpress/install/ -type f -exec chmod 664 {} \;` | Command Two |
+| `sudo find /var/www/path -type d -exec chmod 775 {} \;` | Command Two |
+| `sudo find /var/www/path -type f -exec chmod 664 {} \;` | Command Two |
+
+### Rewrite mode enable commands for lamp server
+
+| Command | Description |
+| ------- | ----------- |
+| `sudo a2enmod rewrite` | Enable Rewrite |
+| `sudo systemctl restart apache2` | Restart Apache |
 
