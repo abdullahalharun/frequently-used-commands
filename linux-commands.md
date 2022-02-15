@@ -6,6 +6,9 @@
 #### zip a folder
 > `zip -r output.zip folder_name`
 
+#### Move all files from a folder to another folder
+> `mv  -v /source/path/* /destination/path/`
+
 ### Rewrite mode enable commands for lamp server
 
 | Command | Description |
