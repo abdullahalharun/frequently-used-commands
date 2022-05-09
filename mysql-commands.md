@@ -28,5 +28,5 @@
 > `mysql -u root -p < /var/www/alldb.sql`
 
 ### Import single database
-> `mysql -u root -p < /var/www/db_name.sql`
+> `mysql -u root -p db_name < /var/www/db_name.sql`
 
