@@ -9,9 +9,9 @@
 
 | Command | Description |
 | ------- | ----------- |
-| `sudo chown -R www-data:myusername /var/www/path` | Command One |
-| `sudo find /var/www/path -type d -exec chmod 775 {} \;` | Command Two |
-| `sudo find /var/www/path -type f -exec chmod 664 {} \;` | Command Two |
+| `sudo chown -R www-data:www-data /var/www/path` | Command One |
+| `sudo find . -type d -exec chmod 775 {} \;` | Command Two |
+| `sudo find . -type f -exec chmod 664 {} \;` | Command Two |
 
 ### Rewrite mode enable commands for lamp server
 
