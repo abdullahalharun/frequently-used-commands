@@ -14,3 +14,5 @@ Delete an Image
 Remove all unused images  
 `docker image prune`
 
+
+Docker cli cheatsheet - https://docs.docker.com/get-started/docker_cheatsheet.pdf
