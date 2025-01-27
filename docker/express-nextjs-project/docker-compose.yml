@@ -1,0 +1,60 @@
+version: "3.8"
+
+networks:
+  express_next_net:
+    driver: bridge
+
+services:
+  backend:
+    build:
+      context: ./
+    container_name: express_backend # backend container name
+    env_file: ./express-backend/.env # backend env file
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    networks:
+      - express_next_net
+
+  frontend:
+    build:
+      context: ./nextjs-frontend
+    container_name: nextjs_frontend
+    env_file: ./nextjs-frontend/.env.local
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - express_next_net
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo_db # mongo container name
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootpassword
+    networks:
+      - express_next_net
+    volumes:
+      - mongo_data:/data/db
+
+  mongo-express:
+    image: mongo-express
+    container_name: mongo_db_express # mongo express container name
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongo
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: rootpassword
+      ME_CONFIG_MONGODB_SERVER: mongo
+    networks:
+      - express_next_net
+
+volumes:
+  mongo_data:
