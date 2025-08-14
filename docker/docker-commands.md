@@ -18,5 +18,14 @@ Delete an Image
 Remove all unused images  
 `docker image prune`
 
+Docker compose up & down
+`docker-compose -f docker-compose.yml down`
 
-Docker cli cheatsheet - https://docs.docker.com/get-started/docker_cheatsheet.pdf
+Down & remove volumes
+`docker-compose -f docker-compose.yml up -d`
+
+Docker compose build with no cache
+`docker-compose -f docker-compose.yml build --no-cache`
+
+Docker compose Up
+`docker-compose -f docker-compose.yml up -d`
